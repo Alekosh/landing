@@ -1,0 +1,22 @@
+.about {
+  background-color: #F6F6F6;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  padding: 120px 0 107px 0;
+  h2{
+    font-family: $ff-Gilroy-Bold;
+    font-size: 3.4em;
+    margin-bottom: 30px;
+  }
+  p{
+    font-size: 1.8em;
+    &:not(:last-child){
+      margin-bottom: 50px;
+    }
+  }
+  .about__inner--text{
+    width: 485.344px;
+  }
+}

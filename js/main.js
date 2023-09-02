@@ -14,3 +14,17 @@ let = function slide() {
   }
   setTimeout(slide, 2000);
 }()
+
+// rating
+
+const ratingITemsList = document.querySelectorAll('.rating__item');
+const ratingItemsArray = Array.prototype.slice.call(ratingITemsList);
+
+ratingItemsArray.forEach(item => {
+  item.addEventListener('click', () => {
+    const { itemValue } = item.dataset;
+    item.parentNode.dataset.totalValue = itemValue;
+
+    // request
+  })
+});

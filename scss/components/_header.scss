@@ -35,4 +35,22 @@
 }
 .header__hero {
   margin-top: 50px;
+  margin-bottom: 104px;
+  img{
+    animation: 1s slide;
+  }
+}
+
+@keyframes slide {
+
+  0% {
+    opacity: 0;
+    margin-left: -300px;
+  }
+  
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+
 }
