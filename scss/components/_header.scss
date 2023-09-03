@@ -1,19 +1,19 @@
 .header {
   font-size: 1.8em;
 }
-.nav {
+.menu__body { //nav
   padding: 32px 0;
   border-bottom: 1px solid #828282;
   font-family: $ff-Gilroy-Bold;
 }
-.nav__list {
+.menu__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav__item {
+.menu__item {
 }
-.nav__link {
+.menu__link{
   color: $gray;
   &:hover{
     color: $black;
@@ -21,9 +21,11 @@
 }
 .header__text {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  .header__left{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   h1{
     width: 123.513px;
   }
@@ -53,4 +55,101 @@
     margin-left: 0;
   }
 
+}
+.menu__icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu__icon {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+  .menu__icon span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .menu__icon span:first-child {
+    top: 0;
+  }
+  .menu__icon span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+  .menu__icon.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .menu__icon.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .menu__icon.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__body {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: $white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+}
+
+.menu__body.active {
+  right: 0;
+}
+
+.menu__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items:flex-start;
+}
+
+@media (max-width: 768px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+    gap: 68px;
+    overflow: auto;
+  }
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .menu__link {
+    display: block;
+    font-size: 30px;
+    line-height: 70px;
+  }
 }
