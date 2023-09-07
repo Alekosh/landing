@@ -57,4 +57,17 @@ if (menu && menuBtn) {
     })
   })
 }
+//============================
+const allLang = ['en', 'ru'];
 
+document.querySelectorAll('.lang-btn').forEach((btn) => btn.addEventListener('click', setLang));
+
+function setLang() {
+  for (let key in langArr) {
+    let elem = document.querySelector('.lang-' + key);
+    if (elem) {
+      elem.innerHTML = langArr[key][this.value];
+    }
+    console.log(key)
+  }
+}

@@ -129,11 +129,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 155.646px;
 }
 
-.header__text span {
+.lang {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+
+.lang .lang-btn {
+  background: none;
+  font-size: 1.2em;
+}
+
+.lang .lang-btn:hover {
+  color: red;
 }
 
 .header__hero {
@@ -445,6 +454,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__contact {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__contact h2 {
@@ -453,8 +472,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__contact p {
   font-size: 1.8em;
-  width: 275.142px;
-  text-align: center;
+  max-width: 275px;
   margin-bottom: 30px;
 }
 

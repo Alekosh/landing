@@ -20,22 +20,27 @@
 
       <nav class="menu__body">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">About me</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Skills</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+          <li class="menu__item"><a href="#" class="menu__link lang-Home">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link lang-About">About me</a></li>
+          <li class="menu__item"><a href="#" class="menu__link lang-Skills">Skills</a></li>
+          <li class="menu__item"><a href="#" class="menu__link lang-Portfolio">Portfolio</a></li>
+          <li class="menu__item"><a href="#" class="menu__link lang-Contacts">Contacts</a></li>
         </ul>
       </nav>
 
       <div class="header__text">
 
         <div class="header__left">
-          <h1>Denis
+          <h1 class="lang-Name">Denis
             Novik</h1>
-          <p>UX | UI designer<br>24 years old, Minsk</p>
+          <p class="lang-NameAbout">UX | UI designer<br>24 years old, Minsk</p>
 
-          <span class="lang">RU | ENG</span>
+          <div class="lang">
+            <button class="lang-btn" value="ru" id="lang-ru">RU </button>
+            <span>|</span>
+            <button class="lang-btn active" value="en" id="lang-en">ENG</button>
+          </div>
+
         </div>
 
         <div class="menu__icon">
@@ -58,12 +63,13 @@
   <section class="about">
     <div class="container">
 
-      <h2>About me</h2>
+      <h2 class="lang-AboutTitle">About me</h2>
       <div class="about__inner--text">
-        <p>Hi, I'm Denis – UX/UI designer from Minsk. <br> I'm interested in design and everything connected with it.
+        <p class="lang-AboutPrimary">Hi, I'm Denis – UX/UI designer from Minsk. <br> I'm interested in design and
+          everything connected with it.
         </p>
-        <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
-        <p>Ready to implement excellent projects <br> with wonderful people.</p>
+        <p class="lang-AboutSecondary">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+        <p class="lang-AboutTertiary">Ready to implement excellent projects <br> with wonderful people.</p>
       </div>
 
     </div>
@@ -73,8 +79,8 @@
     <div class="container">
 
       <div class="skills__text">
-        <h2>Skills</h2>
-        <p>I work in such programs as</p>
+        <h2 class="lang-SkillsTitle">Skills</h2>
+        <p class="lang-SkillDesc">I work in such programs as</p>
       </div>
 
       <div class="skills__card--list">
@@ -136,7 +142,7 @@
     <div class="container">
 
       <div class="portfolio__title">
-        <h2>Portfolio</h2>
+        <h2 class="lang-PortfolioTitle">Portfolio</h2>
       </div>
 
       <div class="portfolio__list">
@@ -170,9 +176,9 @@
     <div class="container">
 
       <div class="footer__contact">
-        <h2>Contacts</h2>
-        <p>Want to know more or just chat? You are welcome!</p>
-        <button class="btn">Send message</button>
+        <h2 class="lang-ContactsTitle">Contacts</h2>
+        <p class="lang-ContactsDesc">Want to know more or just chat? You are welcome!</p>
+        <button class="btn lang-Btn">Send message</button>
       </div>
 
       <div class="social">
@@ -188,11 +194,12 @@
       </div>
 
       <div class="footer__text">
-        <p>Like me on<br>LinkedIn, Instagram, Behance, Dribble</p>
+        <p class="lang-Desc">Like me on<br>LinkedIn, Instagram, Behance, Dribble</p>
       </div>
     </div>
   </footer>
 
+  <script src="./js/lang.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

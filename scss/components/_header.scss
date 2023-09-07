@@ -30,9 +30,16 @@
     width: 123.513px;
   }
   p{width: 155.646px;}
-  span{
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+}
+.lang{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  .lang-btn{
+    background: none;
+    font-size: 1.2em;
+    &:hover{
+      color: red;
+    }
   }
 }
 .header__hero {

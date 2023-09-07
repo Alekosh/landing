@@ -7,13 +7,15 @@
 }
 .footer__contact {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h2{
     margin-bottom: 20px;
   }
   p{
     font-size: 1.8em;
-    width: 275.142px;
-    text-align: center;
+    max-width: 275px;
     margin-bottom: 30px;
   }
 }
